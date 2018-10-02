@@ -1,0 +1,77 @@
+.cowdev-popup {
+    position: fixed;
+    max-height: 80%;
+    max-width: 80%;
+    z-index: 99999;
+    display: none;
+}
+
+.cowdev-popup img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cowdev-popup-close:after {
+    content:'\2716';
+    color: black;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cowdev-overlay.background-black + .cowdev-popup .cowdev-popup-close:after {
+    color: white;
+}
+
+.cowdev-popup.left {
+    left: 10%;
+}
+
+.cowdev-popup.right {
+    right: 10%;
+}
+
+.cowdev-popup.center {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.cowdev-popup.top {
+    top: 10%;
+}
+
+.cowdev-popup.bottom {
+    bottom: 10%;
+}
+
+.cowdev-popup.middle {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.cowdev-popup.middle.center {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.cowdev-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99998;
+    display: none;
+}
+
+.cowdev-overlay.background-black {
+    background: rgba( 0, 0, 0, .8 );
+}
+
+.cowdev-overlay.background-white {
+    background: rgba( 255, 255, 255, .8 );
+}
